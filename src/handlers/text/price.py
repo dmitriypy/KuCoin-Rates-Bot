@@ -7,7 +7,7 @@ async def price(message: types.Message):
     text = message.text.split(" ")
 
     if len(text) > 1:
-        data = await get_data_by_ticker(text[1])
+        data = await get_data_by_pair(text[1])
         if data == None:
             await message.reply("Pair is Invalid! Try again.")
             return
