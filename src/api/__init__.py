@@ -6,7 +6,7 @@ import time
 from data.config import kwargs
 
 
-async def get_data_by_ticker(pair):
+async def get_data_by_pair(pair):
     async with aiohttp.ClientSession() as session:
         r = await session.get(url="https://www.kucoin.com/_api/trade-front/market/getSymbolTick",
                               params={"symbols": pair.upper()})
@@ -17,7 +17,7 @@ async def get_data_by_ticker(pair):
         return tmp["data"][0]
 
 
-async def save_rates_by_ticker(pair, timeframe="12hour"):
+async def save_rates_by_pair(pair, timeframe="12hour"):
     unixtime = int(time.time())
 
     async with aiohttp.ClientSession() as session:
