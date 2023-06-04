@@ -4,7 +4,6 @@ import datetime
 
 
 async def price(message: types.Message):
-    print(message)
     text = message.text.split(" ")
 
     if len(text) > 1:
