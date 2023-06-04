@@ -13,7 +13,7 @@ List of commands
 
     /start@Username
     /price@Username <pair>
-    /rates@Username <pair> <timeframe(default 12h)>
+    /rates@Username <pair> num[min|hour|day|week]
 
 Examples
 -----
